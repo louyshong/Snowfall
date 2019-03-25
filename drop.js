@@ -8,10 +8,14 @@ function Drop() {
     this.y = this.y + this.yspeed;
     var grav = map(this.z, 0, 20, 0, 0.002);
     this.yspeed = this.yspeed + grav;
+    this.x = this.x + 3*noise(0.03);
 
     if (this.y > height) {
       this.y = random(-200, -100);
       this.yspeed = map(this.z, 0, 20, 0.001, 0.01);
+    }
+    if (this.x > width) {
+      this.x = 0;
     }
   }
 

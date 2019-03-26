@@ -21,8 +21,17 @@ function Drop() {
 
   this.show = function() {
     var thick = map(this.z, 0, 20, 1, 6);
-    strokeWeight(thick);
-    stroke(138, 43, 226);
-    point(this.x, this.y);
+
+    if(int(this.z) % 7 == 1) {}
+      strokeWeight(thick);
+      stroke(0, 0, 153);
+      point(this.x, this.y);
+    }
+
+    else {
+      strokeWeight(thick);
+      stroke(138, 43, 226);
+      point(this.x, this.y);
+    }
   }
 }
